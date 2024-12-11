@@ -1,0 +1,304 @@
+/* Estilo geral */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+
+  }
+
+/* Nav */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  background: #3523AB;
+  border-bottom: 1px solid #ccc;
+  position: fixed;
+  color: white;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+ 
+}
+
+
+
+.menu {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  right: 50px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  opacity: 0.5;
+}
+
+
+.login-c {
+  display: none;
+}
+.menu-toggle {
+  display: none;
+}
+
+/* Fim daNav */
+
+  
+  .highlights-section {
+ 
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    overflow-x: auto; /* Ativa rolagem horizontal */
+    margin-top: 12vh;
+  }
+  
+  .highlight-card {
+   
+    flex: 0 0 300px; /* Largura fixa de cada cartão */
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .highlight-card img {
+    width: 100%;
+    height: 475px;
+  }
+  
+  .highlight-text {
+  
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    color: #fff;
+    position: relative;
+    top: -60px; /* Sobrepõe a parte inferior da imagem CHATGPT*/
+    top: 0px; /* Sobrepõe a parte inferior da imagem O meu*/
+  }
+  
+  .highlight-text h3 {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+
+  /* Caixa */
+  .caixa {
+    margin-top: 5vh;
+    left: 45%;
+    transform: translateX(-55%);
+    display: flex;
+    max-width: 800px;
+    width: 50%;
+    height: 50vh;
+    background-color: #1c1c1c;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    
+}
+
+.caixa img {
+    width: 100%;
+    height: 50%;
+    
+    object-fit: cover;
+}
+
+.link {
+  width: 100%;
+  height: 100%;
+}
+
+.conteudo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 42%;
+    outline: 1px solid white;
+    position: absolute;
+    bottom: 0;
+}
+
+.categoria {
+    background-color: #3523AB;
+    width: 5vh;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.autor {
+    font-size: 12px;
+    color: #b5b5b5;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px;
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    align-self: start;
+}
+
+button:hover {
+    background-color: #176ab3;
+}
+
+
+  /* FIm da Caixa */
+
+  /* Ajustes para dispositivos móveis */
+  @media (max-width: 768px) {
+       /* Nav */
+       .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .login {
+        display: none;
+    }
+    .login-c {
+        display: block;
+        margin-left: 4vh;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        height: 120vh;
+        background-color: #fff;
+        padding: 10px 0;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        background-color: #3523AB;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid #ccc;
+    }
+    .menu a {
+        padding-left: 2vh;
+        padding-bottom: 3vh;
+        padding-top: 3vh;
+        font-size: 4vh;
+        border-bottom: gray 1px solid;
+    }
+    .menu.active {
+        display: flex;
+    }
+
+    .categoria {
+      width: 5vh;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        position: absolute;
+        top: 30%;
+        right: 20%;
+    }
+
+      /* Fim da nav */
+
+    .highlights-section {
+      gap: 10px;
+    }
+  
+    .highlight-card {
+      flex: 0 0 80%; /* Cada cartão ocupa 80% da largura da tela */
+    }
+  
+    .highlight-text {
+      top: -50px; /* Ajuste do overlay CHATGPT*/
+      top: 0px; /* Ajuste do overlay O meu*/
+    }
+
+
+    /* Caixa */
+
+    .caixa {
+      flex-direction: column;
+      width: 100%;
+      left: 0%;
+      transform: translateX(0%);
+  }
+
+  .caixa img {
+      width: 100%;
+  }
+
+  .conteudo {
+      width: 100%;
+      padding: 15px;
+  }
+
+  h2 {
+      font-size: 16px;
+  }
+
+  p, .autor {
+      font-size: 12px;
+  }
+
+  button {
+    display: none;
+      font-size: 12px;
+      padding: 8px;
+  }
+}
+
+
+    /* Fim da Caixa */
+
+
+
+
+  
+  
